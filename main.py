@@ -1,5 +1,5 @@
 """
-MODULE DOCSTRING
+MODULE FOR CREATING WEB MAPS WITH MARKERS
 """
 import codecs
 import random
