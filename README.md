@@ -1,4 +1,4 @@
-# map_project
+# UCU MAP PROJECT
 Project for UCU. Usage of folium
 
 Проект націлений на використання бібліотеки Folium. Написаний на мові програмування Python
