@@ -1,12 +1,11 @@
 """
-MODULE FOR CREATING WEB MAPS WITH MARKERS
+MAP PROJECT
 """
 import codecs
 import random
 import argparse
 import sys
 import time
-
 import folium
 from haversine import haversine
 from cachetools import cached, TTLCache
@@ -59,7 +58,11 @@ def main(year, coordinate_one, coordinate_two, path, locations_count=70, marker_
                 try:
                     coordinate = coordinate_finder(location)
                 except:
-                    continue
+                    try:
+                        location_true = location.split(", ")[-2] +", " + location.split(", ")[-1]
+                        coordinate = coordinate_finder(location_true)
+                    except:
+                        continue
                 if coordinate not in locations:
                     locations[coordinate] = [name]
                 else:
