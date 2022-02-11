@@ -157,8 +157,10 @@ def coordinate_finder(location):
     """
     Function, that finds coordinates of addresses.
     Is cached, so you don't have to contact with server for every address, that is using again
-    @param location:
-    @return:
+    >>> coordinate_finder('Ashland, New Hampshire, USA')
+    (43.69568, -71.630859)
+    >>> coordinate_finder('University of New Mexico, Albuquerque, New Mexico, USA')
+    (35.08663275, -106.62020940505188)
     """
     geolocator = Nominatim(user_agent="my_application")
     locator = geolocator.geocode(location)
